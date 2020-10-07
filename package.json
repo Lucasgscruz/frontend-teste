@@ -1,0 +1,22 @@
+{
+  "name": "frontend-teste",
+  "version": "1.0.0",
+  "description": "Desafio frontend hugedevs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucasgscruz/frontend-teste.git"
+  },
+  "author": "Lucas Cruz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lucasgscruz/frontend-teste/issues"
+  },
+  "homepage": "https://github.com/Lucasgscruz/frontend-teste#readme",
+  "dependencies": {
+    "express": "4.17.1"
+  }
+}

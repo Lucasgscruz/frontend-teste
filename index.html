@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Desafio frontend</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- my css -->
+  <link rel="stylesheet" href="css/mystyle.css">
+
+  <!-- tag icon -->
+  <link rel="icon" type="imagem/png" href="./img/logo.png" />
+</head>
+
+<body onkeypress="keyPress(event)">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="./img/drawing.svg">
+          </a>
+          <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" style="color: white" href="#">Landings</a>
+            <a class="dropdown-item" style="color: white" href="#">Components</a>
+          </div>
+        </li>
+      </ul>
+      <ul class=" nav nanbar-nav mr-auto">
+        <li class="nav-item ">
+          <h4  id="teste" style="color: white">Teste Developers</h4>
+        </li>
+      </ul>
+      <form class="form-inline">
+        <button class="btn btn-outline-light my-2 my-sm-0" id="myBtn">
+          Log in
+        </button>
+        <a class="ml-3" href="https://www.figma.com/proto/Pdd6VRN08X6kCyZlIeuWEG/Teste-Developers?node-id=65%3A0&scaling=scale-down">
+          <img src="./img/play.png" id="playLogo">
+        </a>
+        <ul class=" nav nanbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a id = "seletor" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" 
+            aria-haspopup="true" aria-expanded="false" style="color: white" data-placement="bottom" title="Zoom/view options">
+            6%
+          </a>
+          <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+            <input class="form-control mr-2 ml-2" id="view" type="search" placeholder="% view" aria-label="Pesquisar">
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#" onclick="toggleZoom('zoomin')">Zoom in (+)</a>
+            <a class="dropdown-item" href="#" onclick="toggleZoom('zoomout')">Zoom out (-)</a>
+            <a class="dropdown-item" href="#" onclick="toggleZoom('fit')">Zoom to fit (0)</a>
+            <a class="dropdown-item" href="#" onclick="toggleZoom('50%')" >Zoom to 50%</a>
+            <a class="dropdown-item" href="#" onclick="toggleZoom('100%')">Zoom to 100%</a>
+            <a class="dropdown-item" href="#" onclick="toggleZoom('200%')">Zoom to 200%</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Pixel Preview</a>
+            <a class="dropdown-item" href="#">Pixel Grid</a>
+            <a class="dropdown-item" href="#">Snap to Pixel Grid</a>
+            <a class="dropdown-item" href="#">Layout Grids</a>
+            <a class="dropdown-item" href="#">Rules</a>
+            <a class="dropdown-item" href="#">Outlines</a>
+            <a class="dropdown-item" href="#">Multiplayers Cursors</a>
+          </div>
+        </li>
+      </ul>
+
+    </form>
+  </div>
+</nav>
+
+<!-- Image -->
+<div id="mydiv">
+  <img class="img-fluid" src="img/logo.png" width="100" height="100" id="imgpos">
+</div>
+
+
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <!--    Modal content -->
+  <div class="modal-content">
+   
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">E-mail</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+      </div>
+      <button type="submit" class="btn btn-primary">Log in</button>
+      <button id="closeBtn" type="submit" class="btn btn-secondary">Close</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+  <!-- jQuery, Popper.js, Bootstrap JS, my script -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+  crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./js/view.js"></script>
+</body>
+
+</html>
